@@ -8,7 +8,7 @@ def generar(datos, fecha):
     pdfmetrics.registerFont(TTFont('kau','fuentes\KaushanScript-Regular.ttf'))
     pdfmetrics.registerFont(TTFont('comme','fuentes\Comme-Medium.ttf'))
 
-    pdf = canvas.Canvas('datos\informe.pdf')
+    pdf = canvas.Canvas('datos/informe.pdf')
     pdf.setTitle('Recibos')
     pdf.setLineWidth(0.5)
 

@@ -1,5 +1,5 @@
 __pycache__/
 .vscode/
 build/
-datos.csv
+datos/
 informe.pdf

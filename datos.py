@@ -1,9 +1,14 @@
-import csv
+import csv,os
 from PyQt5.QtWidgets import QTableWidgetItem
 
-archivo = 'datos\datos.csv'
+archivo = 'datos/datos.csv'
 cssfecha = "font-size: 18px;"
 cssimpri = "font: bold 20px; color: #35a;"
+
+try:
+    os.mkdir('datos')
+except:
+    pass
 
 def grabar(tabla):
     with open(archivo, 'w', newline='') as stream:

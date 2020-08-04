@@ -9,7 +9,7 @@ class Ventana(QWidget):
         super().__init__()
 
         self.setWindowTitle("Generador de recibos")
-        self.setWindowIcon(QIcon("iconos\icono.png"))
+        self.setWindowIcon(QIcon("iconos/icono.png"))
         self.setFixedSize(800, 480)
 
         self.tabla = QTableWidget(self)
@@ -34,7 +34,7 @@ class Ventana(QWidget):
 
         self.boton = QPushButton(" IMPRIMIR", self)
         self.boton.setStyleSheet(datos.cssimpri)
-        self.boton.setIcon(QIcon('iconos\impresion.png'))
+        self.boton.setIcon(QIcon('iconos/impresion.png'))
         self.boton.setGeometry(541, 420, 250, 50)
         self.boton.clicked.connect(self.imprimir)        
 
