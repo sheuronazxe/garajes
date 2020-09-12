@@ -15,7 +15,7 @@ class Ventana(QWidget):
         self.tabla = QTableWidget(self)
         self.tabla.setRowCount(1)
         self.tabla.setColumnCount(3)
-        self.tabla.setHorizontalHeaderLabels(["Nombre","Garaje","Alquilver"])
+        self.tabla.setHorizontalHeaderLabels(["Nombre","Garaje","Alquiler"])
         self.tabla.verticalHeader().hide()
         self.tabla.setGeometry(10,10,self.width()-20, 400)
         self.tabla.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
@@ -52,6 +52,7 @@ class Ventana(QWidget):
         self.tabla.sortItems(0, Qt.AscendingOrder)
         if self.tabla.item(self.tabla.rowCount()-1,0):
             self.tabla.insertRow(self.tabla.rowCount())
+            self.tabla.setToolTip("hola")
         datos.grabar(self.tabla)
 
     def imprimir(self):
